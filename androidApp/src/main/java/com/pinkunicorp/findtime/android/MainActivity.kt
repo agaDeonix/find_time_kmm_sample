@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.ui.res.stringResource
-import com.pinkunicorp.findtime.android.ui.MainView
 import io.github.aakira.napier.DebugAntilog
+import com.pinkunicorp.compose.ui.MainView
 import io.github.aakira.napier.Napier
 
 class MainActivity : AppCompatActivity() {

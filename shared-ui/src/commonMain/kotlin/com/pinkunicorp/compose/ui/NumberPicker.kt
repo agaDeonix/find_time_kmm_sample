@@ -1,4 +1,4 @@
-package com.pinkunicorp.findtime.android.ui
+package com.pinkunicorp.compose.ui
 
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.gestures.Orientation

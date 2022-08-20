@@ -1,6 +1,5 @@
-package com.pinkunicorp.findtime.android.ui
+package com.pinkunicorp.compose.ui
 
-import android.widget.NumberPicker
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -16,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.pinkunicorp.compose.ui.NumberPicker
 
 @Composable
 fun NumberTimeCard(label: String, hour: MutableState<Int>) {

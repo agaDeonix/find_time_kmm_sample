@@ -1,4 +1,4 @@
-package com.pinkunicorp.findtime.android.ui
+package com.pinkunicorp.compose.ui
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.tween

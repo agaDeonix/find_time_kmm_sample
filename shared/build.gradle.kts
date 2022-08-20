@@ -8,6 +8,12 @@ version = "1.0"
 
 kotlin {
     android()
+    macosX64("macOS")
+    jvm("desktop") {
+        compilations.all {
+            kotlinOptions.jvmTarget = "11"
+        }
+    }
     iosX64()
     iosArm64()
     iosSimulatorArm64()

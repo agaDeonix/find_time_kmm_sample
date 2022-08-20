@@ -1,4 +1,4 @@
-package com.pinkunicorp.findtime.android.ui
+package com.pinkunicorp.compose.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

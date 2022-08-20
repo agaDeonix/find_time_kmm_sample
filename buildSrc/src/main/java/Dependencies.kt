@@ -3,7 +3,7 @@ const val androidPlugin = "android"
 const val androidApp = "com.android.application"
 const val androidLib = "com.android.library"
 const val multiplatform = "multiplatform"
-const val cocmposePlugin = "org.jetbrains.compose"
+const val composePlugin = "org.jetbrains.compose"
 const val cocopods = "native.cocoapods"
 
 object Versions {
@@ -23,7 +23,7 @@ object Versions {
     const val junit = "4.13.2"
     const val material = "1.4.0"
     const val kotlinxDateTime = "0.3.1"
-    const val activity_compose = "1.4.0"
+    const val activity_compose = "1.5.1"
     const val napier = "2.1.0"
     const val junit5 = "1.5.10"
     const val frameworkName = "shared"
@@ -48,13 +48,13 @@ object Deps {
         const val compiler = "androidx.compose.compiler:compiler:${Versions.compose_version}"
         const val runtime_livedata = "androidx.compose.runtime:runtime-livedata:${Versions.compose_version}"
         const val foundation_layout = "androidx.compose.foundation:foundation-layout:${Versions.compose_version}"
-        const val activity = "androidx.activity:activity-compose:${Versions.compose_version}"
+        const val activity = "androidx.activity:activity-compose:${Versions.activity_compose}"
     }
 
     object Coroutines {
-        const val common = "org.jetbrains.kotlinx:kotliinx-coroutines-core:${Versions.coroutines}"
-        const val android = "org.jetbrains.kotlinx:kotliinx-coroutines-android:${Versions.coroutines}"
-        const val test = "org.jetbrains.kotlinx:kotliinx-coroutines-test:${Versions.coroutines}"
+        const val common = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+        const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+        const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
     }
 
     object JetBrains {

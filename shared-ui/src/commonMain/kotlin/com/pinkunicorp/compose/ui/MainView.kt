@@ -1,4 +1,4 @@
-package com.pinkunicorp.findtime.android.ui
+package com.pinkunicorp.compose.ui
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
@@ -14,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import com.pinkunicorp.findtime.android.theme.AppTheme
-import com.pinkunicorp.findtime.android.ui.BottomNavigationItem
 
 sealed class Screen(val title: String) {
     object TimeZonesScreen : Screen("Timezones")

@@ -1,4 +1,4 @@
-package com.pinkunicorp.findtime.android.ui
+package com.pinkunicorp.compose.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -16,13 +16,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.window.Dialog
 import com.pinkunicorp.findtime.TimeZoneHelper
 import com.pinkunicorp.findtime.TimeZoneHelperImpl
-import com.pinkunicorp.findtime.android.R
 import kotlinx.coroutines.launch
+
+@Composable
+expect fun AddTimeDialogWrapper(onDismiss: onDismissType, content: @Composable () -> Unit)
 
 fun isSelected(selectedStates: Map<Int, Boolean>, index: Int): Boolean {
     return (selectedStates.containsKey(index) && (true == selectedStates[index]))
@@ -30,12 +30,11 @@ fun isSelected(selectedStates: Map<Int, Boolean>, index: Int): Boolean {
 
 @Composable
 fun AddTimeZoneDialog(
-    timezoneHelper: TimeZoneHelper = TimeZoneHelperImpl(),
-    onAdd: (List<String>) -> Unit,
-    onDismiss: () -> Unit
-) = Dialog(
-    onDismissRequest = onDismiss
+    onAdd: OnAddType,
+    onDismiss: onDismissType
 ) {
+    val timezoneHelper: TimeZoneHelper = TimeZoneHelperImpl()
+    AddTimeDialogWrapper(onDismiss) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -127,7 +126,7 @@ fun AddTimeZoneDialog(
                     onDismiss()
                 }
             ) {
-                Text(text = stringResource(id = R.string.cancel))
+                Text(text = "Cancel")
             }
             Spacer(modifier = Modifier.size(16.dp))
             Button(
@@ -140,9 +139,10 @@ fun AddTimeZoneDialog(
                     )
                 }
             ) {
-                Text(text = stringResource(id = R.string.add))
+                Text(text = "Add")
             }
         }
+    }
     }
 }
 
